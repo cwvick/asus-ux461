@@ -56,11 +56,11 @@ $(document).ready(function() {
 
 		$(window).scroll(function(){
 			if($(window).scrollTop() >1000){
-				console.log("is more");
+				// console.log("is more");
 				$("#toTop").fadeIn("slow");
 			}
 			else {
-				console.log("is less");
+				// console.log("is less");
 				$("#toTop").fadeOut("slow");
 			}
 		});
@@ -136,7 +136,7 @@ $(window).load(function() {
 $(function() {
 	$(document).on('click', '.btn-more', function(event) {
 		event.preventDefault();
-		var $btnContent = $(this).parents('.learn-more')
+		var $btnContent = $(this).parents('.learn-more');
 		var $sectionTarget = $btnContent.next('.more-wrapper');
 		var closeTop = $btnContent.offset().top - 100;
 		var isOpened = $(this).hasClass('opened');
@@ -155,6 +155,31 @@ $(function() {
 			$btnContent.addClass('active');
 			$sectionTarget.slideDown(800);
 		}
-		
+
+	});
+
+	$(window).scroll(function(event) {
+		var winHeight = $(window).height();
+		var winTop = $(window).scrollTop();
+
+		$('.more-wrapper:visible').each(function(index, el) {
+			if (winTop + winHeight > $(this).offset().top && winTop <= $(this).offset().top + $(this).height()) {
+				var btnIndex = $(this).data('index') - 1;
+				var $btn = $('.btn-more').eq(btnIndex);
+				var $btnContent = $btn.parents('.learn-more');
+				var btnTop = $btnContent.offset().top;
+				var $sectionTarget = $btnContent.next('.more-wrapper');
+				var sectionHeight = $sectionTarget.height();
+
+				if ($btnContent.hasClass('active') && winTop > btnTop + 60 && winTop <= btnTop + sectionHeight - 30) {
+					$btn.show();
+					$btn.addClass('fixed');
+				} else if (winTop > btnTop + sectionHeight - 30) {
+					$btn.hide();
+				} else {
+					$btn.removeClass('fixed');
+				}
+			}
+		});
 	});
 });

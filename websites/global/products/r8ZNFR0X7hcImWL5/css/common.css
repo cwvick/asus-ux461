@@ -429,6 +429,11 @@ img {
 .learn-more.active .txt-more {
   opacity: 0;
 }
+.learn-more .btn-more.fixed {
+  z-index: 9999;
+  position: fixed;
+  top: 10px;
+}
 .more-wrapper {
   display: none;
   width: 100%;
