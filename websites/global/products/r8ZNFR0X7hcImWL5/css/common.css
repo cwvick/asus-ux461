@@ -111,7 +111,7 @@ img {
 .fontW{color:white!important;}
 .fontG{color:#848484!important}
 .fontB{color:#33b9ff!important;}
-/*ÈñìË∑ù*/
+/*?ìË?*/
 .separate-head{	display: block;	width: 100%;	height: 90px; }
 .separate-n2s{display: block;	width: 100%;	height: 38px;}
 .separate-s2t{display: block;	width: 100%;	height: 59px;}
@@ -391,7 +391,70 @@ img {
 	vertical-align: bottom;
 	margin-left: 1em;
 }
-
+.learn-more {
+  height: 80px;
+}
+.learn-more .txt-more {
+  margin-bottom: 15px;
+}
+.learn-more .btn-more {
+  font-size: 0;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  margin: 20px 0 20px -20px;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: translateY(0px) rotate(0deg);
+  -ms-transform: translateY(0px) rotate(0deg);
+  transform: translateY(0px) rotate(0deg);
+  -webkit-transition: -webkit-transform 800ms 50ms;
+  transition: -webkit-transform 800ms 50ms;
+  transition: transform 800ms 50ms;
+  transition: transform 800ms 50ms, -webkit-transform 800ms 50ms;
+  background-image: url(../images/icon_open.png);
+}
+.learn-more.active .btn-more {
+  -webkit-transform: translateY(60px) rotate(45deg);
+  -ms-transform: translateY(60px) rotate(45deg);
+  transform: translateY(60px) rotate(45deg);
+}
+.learn-more.active .txt-more {
+  opacity: 0;
+}
+.more-wrapper {
+  display: none;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #f1f1f1;
+}
+.wrap-performance-more figure {
+  display: inline-block;
+  margin: 0 2%!important;
+}
+.wrap-graphics-more figure {
+  display: inline-block;
+  margin: 0 2%!important;
+}
+.wrap-graphics-more .box-img-cent {
+  width: 70%;
+}
+.wrap-graphics-more .box-img-cent .box-img-unsurpassed {
+  width: 100%;
+  height: 0;
+  margin: 0 auto;
+  padding-bottom: 52.50192455735181%;
+  background: url(websites/global/products/r8ZNFR0X7hcImWL5/images/desktop/img-Unsurpassed.png) no-repeat;
+  background-size: contain;
+}
 /**/
 .box-select, .box-select a {
 	font-family : "myriad-pro";
@@ -710,7 +773,7 @@ figure{margin:0 !important}
 
 /**/
 @media screen and (max-width:770px){
-	/*ÈñìË∑ù*/
+	/*?ìË?*/
 .separate-head{	height: 77px; }
 .separate-n2s{height: 38px;}
 .separate-s2t{height: 48px;}
