@@ -460,6 +460,17 @@ img {
   background: url(websites/global/products/r8ZNFR0X7hcImWL5/images/desktop/img-Unsurpassed.png) no-repeat;
   background-size: contain;
 }
+.lazy-image {
+  opacity: 0 !important;
+}
+.lazy-image-show {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
 /**/
 .box-select, .box-select a {
 	font-family : "myriad-pro";

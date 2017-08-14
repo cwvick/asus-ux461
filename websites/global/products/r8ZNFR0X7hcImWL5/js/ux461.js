@@ -88,7 +88,13 @@ $(document).ready(function() {
 
 $(window).load(function() {
 
-	
+	$('#box-productOverview-containter > section').waypoint({
+    handler: function(direction) {
+      console.log($(this.element).attr('class'));
+      $(this.element).find('.lazy-image').removeClass('lazy-image').addClass('lazy-image-show');
+    },
+		offset: '35%'
+  });
 	
 //  parallax SCROLLMAGIC/*----------------------------------------------------------------*\
 //		var controller;
@@ -131,7 +137,7 @@ $(window).load(function() {
 //							.setTween(tween)
 //							.addTo(controller);
 
-		}); 
+}); 
 
 $(function() {
 	$(document).on('click', '.btn-more', function(event) {
